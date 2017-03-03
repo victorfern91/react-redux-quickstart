@@ -15,7 +15,14 @@ const webpackConfig = {
   devtool: 'cheap-module-source-map',
   entry: {
     main: './app/index.jsx',
-    vendor: ['react', 'react-dom'],
+    vendor: [
+      'react',
+      'react-dom',
+      'redux',
+      'react-redux',
+      'redux-thunk',
+      'redux-promise-middleware',
+    ],
   },
   module: {
     loaders: [{
