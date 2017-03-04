@@ -16,14 +16,14 @@ class Counter extends Component {
   }
 
   render() {
-    const counter = this.props.store.getState().counter;
+    const counter = this.props.store.getState().counter.value;
 
     return (
       <div>
         <h1>Hello World</h1>
-        <h2> Counter : { counter }</h2>
-        <button onClick={() => this.increment()}>+1</button>
-        <button onClick={() => this.decrement()}>-1</button>
+        <h2 className="counter"> Counter : { counter }</h2>
+        <button className="btn btn-secundary increment" onClick={() => this.increment()}>+1</button>
+        <button className="btn btn-secundary decrement" onClick={() => this.decrement()}>-1</button>
       </div>
     );
   }
